@@ -1,0 +1,713 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Grooming — Informação e Prevenção</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head><body><main><!-- ==================== INÍCIO ==================== -->
+
+<section id="inicio">
+
+    <div class="icone-inicio">🔎</div>
+
+    <span class="etiqueta">QUIZ EDUCATIVO</span>
+
+    <h1>Grooming</h1>
+
+    <p class="subtitulo">
+        Entenda, reconheça e previna situações de manipulação.
+    </p>
+
+    <div class="apresentacao">
+
+        <span class="etiqueta">
+            PRODUTO FINAL — TCF
+        </span>
+
+        <p>
+            Este site foi desenvolvido como produto final do
+            Trabalho de Conclusão Final (TCF) pelo grupo formado por
+            Luiz Aurélio, Iara Thainá, Jailton Félix, Matheus Galvão
+            e Maria Clara Alves.
+        </p>
+
+        <p>
+            O projeto tem como objetivo conscientizar adolescentes
+            sobre o grooming, apresentando informações sobre o tema,
+            formas de manipulação utilizadas nesse processo e maneiras
+            de reconhecer possíveis situações de risco, incentivando
+            a busca por ajuda e a prevenção.
+        </p>
+
+    </div>
+
+    <div class="info-quiz">
+
+        <div>
+            <strong>10</strong>
+            <span>perguntas</span>
+        </div>
+
+        <div>
+            <strong>💡</strong>
+            <span>aprenda</span>
+        </div>
+
+        <div>
+            <strong>🛡️</strong>
+            <span>proteja-se</span>
+        </div>
+
+    </div>
+
+    <button
+        class="botao-comecar"
+        onclick="mostrarTela('introducao')">
+        COMEÇAR
+    </button>
+
+    <p class="texto-ajuda">
+        Primeiro, vamos entender um pouco sobre o assunto.
+    </p>
+
+</section>
+
+
+<!-- ==================== INTRODUÇÃO ==================== -->
+
+<section id="introducao" class="escondido">
+
+    <div class="icone-inicio">📖</div>
+
+    <span class="etiqueta">ENTENDA</span>
+
+    <h2>O que é grooming?</h2>
+
+    <p>
+        Grooming é um processo de aproximação e manipulação em que
+        uma pessoa busca ganhar a confiança de uma criança ou
+        adolescente com o objetivo de facilitar situações de abuso
+        ou exploração.
+    </p>
+
+    <p>
+        Esse processo pode acontecer tanto pela internet quanto
+        presencialmente e pode envolver diferentes estratégias
+        para conquistar a confiança da vítima.
+    </p>
+
+    <button onclick="mostrarTela('origem')">
+        CONTINUAR →
+    </button>
+
+</section>
+
+
+<!-- ==================== ORIGEM ==================== -->
+
+<section id="origem" class="escondido">
+
+    <div class="icone-inicio">🧠</div>
+
+    <span class="etiqueta">ENTENDA</span>
+
+    <h2>Origem do termo</h2>
+
+    <p>
+        A palavra <strong>grooming</strong> vem do inglês e está
+        relacionada à ideia de preparar alguém para determinada
+        finalidade.
+    </p>
+
+    <p>
+        No contexto da violência contra crianças e adolescentes,
+        o termo passou a ser utilizado para descrever o processo de
+        aproximação, construção de confiança e manipulação realizado
+        pelo abusador.
+    </p>
+
+    <button onclick="mostrarTela('prequiz')">
+        CONTINUAR →
+    </button>
+
+</section>
+
+
+<!-- ==================== PRÉ-QUIZ ==================== -->
+
+<section id="prequiz" class="escondido">
+
+    <div class="icone-inicio">🎯</div>
+
+    <span class="etiqueta">AGORA É COM VOCÊ</span>
+
+    <h2>Vamos fazer o quiz?</h2>
+
+    <p class="subtitulo">
+        Agora que você já conhece o básico sobre grooming,
+        chegou a hora de testar o que aprendeu.
+    </p>
+
+    <div class="info-quiz">
+
+        <div>
+            <strong>10</strong>
+            <span>perguntas</span>
+        </div>
+
+        <div>
+            <strong>🏆</strong>
+            <span>resultado</span>
+        </div>
+
+    </div>
+
+    <button
+        class="botao-comecar"
+        onclick="iniciarQuiz()">
+        COMEÇAR QUIZ
+    </button>
+
+    <p class="texto-ajuda">
+        Leia cada pergunta com atenção.
+    </p>
+
+</section>
+
+
+<!-- ==================== QUIZ ==================== -->
+
+<section id="quiz" class="escondido">
+
+    <h1>Quiz</h1>
+
+    <p id="progresso">
+        Pergunta 1 de 10
+    </p>
+
+    <div class="barra-progresso">
+        <div id="barra"></div>
+    </div>
+
+    <div class="pergunta-area">
+
+        <p id="pergunta"></p>
+
+    </div>
+
+    <div id="alternativas"></div>
+
+    <div id="feedback" class="escondido">
+
+        <h2 id="resultado"></h2>
+
+        <p id="explicacao"></p>
+
+        <button
+            id="botaoProxima"
+            onclick="proximaPergunta()">
+            PRÓXIMA PERGUNTA →
+        </button>
+
+    </div>
+
+
+    <!-- ==================== RESULTADO ==================== -->
+
+    <div id="resultadoFinal" class="escondido">
+
+        <div class="icone-resultado">
+            🏆
+        </div>
+
+        <span class="etiqueta">
+            QUIZ CONCLUÍDO
+        </span>
+
+        <h2>Você terminou!</h2>
+
+        <p id="pontuacaoFinal"></p>
+
+        <div class="barra-resultado">
+            <div id="barraResultado"></div>
+        </div>
+
+        <p id="mensagemFinal"></p>
+
+        <button
+            class="botao-protecao"
+            onclick="mostrarTela('protecao')">
+            🛡️ APRENDER A SE PROTEGER
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ==================== PROTEÇÃO ==================== -->
+
+<section id="protecao" class="escondido">
+
+    <div class="icone-inicio">🛡️</div>
+
+    <span class="etiqueta">
+        PROTEÇÃO E AJUDA
+    </span>
+
+    <h2>O que fazer quando algo parecer errado?</h2>
+
+    <p>
+        Saber reconhecer situações de grooming é importante,
+        mas também é fundamental saber o que fazer quando
+        alguma situação causar desconforto ou parecer suspeita.
+    </p>
+
+    <div class="card-protecao">
+
+        <div class="icone-card">🛡️</div>
+
+        <div>
+            <h3>Proteja-se</h3>
+
+            <p>
+                Evite compartilhar informações pessoais com
+                desconhecidos e não aceite pressão para manter
+                conversas ou situações em segredo.
+            </p>
+
+            <p>
+                Se alguém ultrapassar seus limites, você pode
+                dizer não, encerrar a conversa e procurar ajuda.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="card-protecao">
+
+        <div class="icone-card">💬</div>
+
+        <div>
+            <h3>Converse com alguém</h3>
+
+            <p>
+                Se uma situação estiver deixando você
+                desconfortável, conte para um adulto de confiança.
+            </p>
+
+            <p>
+                Pode ser um responsável, professor, orientador
+                ou outra pessoa adulta em quem você confie.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="card-protecao alerta">
+
+        <div class="icone-card">🚨</div>
+
+        <div>
+            <h3>Precisa denunciar?</h3>
+
+            <p>
+                Situações de violência ou exploração contra
+                crianças e adolescentes podem ser denunciadas.
+            </p>
+
+            <p>
+                No Brasil, o <strong>Disque 100</strong> recebe
+                denúncias de violações de direitos humanos.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="frase-protecao">
+
+        <strong>
+            Você não precisa enfrentar isso sozinho.
+        </strong>
+
+        <p>
+            Procurar ajuda é uma atitude de proteção.
+        </p>
+
+    </div>
+
+
+    <button
+        class="botao-comecar"
+        onclick="mostrarTela('sobre')">
+        CONTINUAR →
+    </button>
+
+</section>
+
+
+<!-- ==================== SOBRE O TCF ==================== -->
+
+<section id="sobre" class="escondido">
+
+    <div class="icone-inicio">📚</div>
+
+    <span class="etiqueta">
+        SOBRE O PROJETO
+    </span>
+
+    <h2>Sobre o TCF</h2>
+
+    <p class="subtitulo">
+        Informações sobre o trabalho e a equipe responsável
+        pelo desenvolvimento deste projeto.
+    </p>
+
+
+    <div class="dados-tcf">
+
+        <div class="dado-tcf">
+            <span>🎓</span>
+            <div>
+                <small>TEMA</small>
+                <strong>
+                    Grooming: a manipulação psicológica em adolescentes
+                </strong>
+            </div>
+        </div>
+
+
+        <div class="dado-tcf">
+            <span>🏫</span>
+            <div>
+                <small>ESCOLA</small>
+                <strong>
+                    EREFEM Brigadeiro Eduardo Gomes
+                </strong>
+            </div>
+        </div>
+
+
+        <div class="dado-tcf">
+            <span>📅</span>
+            <div>
+                <small>ANO</small>
+                <strong>2026</strong>
+            </div>
+        </div>
+
+
+        <div class="dado-tcf">
+            <span>👨‍🏫</span>
+            <div>
+                <small>PROFESSOR ORIENTADOR</small>
+                <strong>Tânia</strong>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="equipe-final">
+
+        <span class="equipe-etiqueta">
+            EQUIPE DO PROJETO
+        </span>
+
+        <h3>Integrantes</h3>
+
+        <div class="nomes-equipe">
+
+            <span>
+                Luiz Aurélio
+            </span>
+
+            <span>
+                Iara Thainá
+            </span>
+
+            <span>
+                Jailton Félix
+            </span>
+
+            <span>
+                Matheus Galvão
+            </span>
+
+            <span>
+                Maria Clara Alves
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="desenvolvedor-final">
+
+        <span>💻</span>
+
+        <div>
+            <small>DESENVOLVIMENTO DO SITE</small>
+
+            <strong>
+                Luiz Aurélio
+            </strong>
+
+            <p>
+                Criador e desenvolvedor de todo o site interativo.
+            </p>
+        </div>
+
+    </div>
+
+
+    <button
+        class="botao-comecar"
+        onclick="mostrarTela('fontes')">
+        VER FONTES DE PESQUISA →
+    </button>
+
+</section>
+
+
+<!-- ==================== FONTES ==================== -->
+
+<section id="fontes" class="escondido">
+
+    <div class="icone-inicio">🔎</div>
+
+    <span class="etiqueta">
+        FONTES DE PESQUISA
+    </span>
+
+    <h2>De onde vieram as informações?</h2>
+
+    <p>
+        Este site foi desenvolvido a partir de pesquisas realizadas
+        pelo grupo em fontes confiáveis sobre grooming, segurança
+        digital, proteção de crianças e adolescentes e violência
+        sexual.
+    </p>
+
+    <p>
+        As informações utilizadas no conteúdo, nas explicações e
+        no quiz foram baseadas nos materiais consultados durante
+        o desenvolvimento do TCF.
+    </p>
+
+
+    <div class="lista-fontes">
+
+        <div class="fonte-item">
+            <strong>UNICEF Brasil</strong>
+            <span>
+                Conteúdos sobre proteção e segurança de crianças
+                e adolescentes.
+            </span>
+        </div>
+
+
+        <div class="fonte-item">
+            <strong>ECPAT International</strong>
+            <span>
+                Materiais sobre grooming e exploração sexual
+                de crianças e adolescentes.
+            </span>
+        </div>
+
+
+        <div class="fonte-item">
+            <strong>Merriam-Webster</strong>
+            <span>
+                Definição e origem do termo “groom”.
+            </span>
+        </div>
+
+
+        <div class="fonte-item">
+            <strong>RAINN</strong>
+            <span>
+                Get the Facts About Grooming.
+            </span>
+        </div>
+
+
+        <div class="fonte-item">
+            <strong>SaferNet Brasil</strong>
+            <span>
+                Conteúdos relacionados à segurança digital.
+            </span>
+        </div>
+
+
+        <div class="fonte-item">
+            <strong>Childhood Brasil</strong>
+            <span>
+                Conteúdos sobre proteção de crianças e adolescentes.
+            </span>
+        </div>
+
+
+        <div class="fonte-item artigo">
+
+            <strong>
+                Journal of Adolescence
+            </strong>
+
+            <span>
+                Gámez-Guadix, Manuel et al.
+                <em>
+                    Stability of the online grooming victimization
+                    of minors: Prevalence and association with shame,
+                    guilt, and mental health outcomes over one year.
+                </em>
+                Journal of Adolescence, v. 95, n. 8,
+                p. 1715–1724, 2023.
+            </span>
+
+            <span>
+                DOI: 10.1002/jad.12240
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <p class="observacao-fontes">
+        As fontes foram utilizadas como base para a pesquisa e
+        elaboração do conteúdo educativo deste projeto.
+    </p>
+
+
+    <button
+        class="botao-comecar"
+        onclick="mostrarTela('encerramento')">
+        CONTINUAR →
+    </button>
+
+</section>
+
+
+<!-- ==================== ENCERRAMENTO ==================== -->
+
+<section id="encerramento" class="escondido">
+
+    <div class="icone-resultado">
+        🛡️
+    </div>
+
+    <span class="etiqueta">
+        ENCERRAMENTO
+    </span>
+
+    <h2>Informação também é proteção.</h2>
+
+    <p>
+        Conhecer o grooming, reconhecer sinais de manipulação
+        e saber quando procurar ajuda são passos importantes
+        para a prevenção.
+    </p>
+
+    <p>
+        Este site foi desenvolvido como produto final do TCF
+        para contribuir com a conscientização de adolescentes
+        sobre o tema.
+    </p>
+
+
+    <div class="frase-encerramento">
+
+        <strong>
+            Conhecer. Reconhecer. Pedir ajuda.
+        </strong>
+
+        <span>
+            Esses também são passos de proteção.
+        </span>
+
+    </div>
+
+
+    <p class="rodape-tcf">
+        TCF 2026 — EREFEM Brigadeiro Eduardo Gomes
+    </p>
+
+
+    <button
+        class="botao-comecar"
+        onclick="mostrarTela('inicio')">
+        ← VOLTAR AO INÍCIO
+    </button>
+
+</section>
+
+</main><!-- =====================================================
+     NOX
+     ===================================================== --><div id="mascote"><div id="falaMascote">
+    Vamos começar?
+</div>
+
+<div class="nox-flutuacao">
+
+    <div
+        id="nox"
+        data-state="IDLE"
+        role="button"
+        tabindex="0"
+        aria-label="Nox, Guardião da Segurança Digital">
+
+        <div class="nox-antena">
+            <span></span>
+        </div>
+
+        <div class="nox-cabeca">
+
+            <span class="nox-sensor sensor-esq"></span>
+            <span class="nox-sensor sensor-dir"></span>
+
+            <div class="nox-tela">
+
+                <span class="olho olho-esq"></span>
+                <span class="olho olho-dir"></span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nox-corpo">
+
+            <div class="nox-pescoco"></div>
+
+            <div class="nox-peito">
+                <span></span>
+                <i></i>
+                <b></b>
+            </div>
+
+        </div>
+
+
+        <div class="nox-braco nox-braco-esq">
+            <span></span>
+        </div>
+
+        <div class="nox-braco nox-braco-dir">
+            <span></span>
+        </div>
+
+
+        <div class="nox-pe nox-pe-esq"></div>
+        <div class="nox-pe nox-pe-dir"></div>
+
+    </div>
+
+</div>
+
+</div><script src="script.js"></script></body>
+</html>
